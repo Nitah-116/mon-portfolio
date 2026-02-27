@@ -19,7 +19,6 @@ body {
     --blue-primary: #3498db;
     --blue-dark: #2980b9;
     --text-dark: #2c3e50;
-    --blue-light: #e3f2fd;
 }
 
 nav {
@@ -30,10 +29,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    animation: slideDown 0.8s ease;
 }
 
 .logo {
@@ -42,15 +37,6 @@ nav {
     color: var(--blue-primary);
     letter-spacing: 1px;
     animation: fadeIn 1s ease-in;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo i {
-    font-size: 2rem;
-    color: var(--blue-dark);
-    animation: rotate 10s linear infinite;
 }
 
 nav ul {
@@ -66,23 +52,11 @@ nav ul li a {
     padding: 0.5rem 0;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-nav ul li a i {
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
 }
 
 nav ul li a:hover {
     color: var(--blue-primary);
     border-bottom-color: var(--blue-primary);
-}
-
-nav ul li a:hover i {
-    transform: translateY(-3px);
 }
 
 nav ul li a.active {
@@ -114,17 +88,16 @@ main {
 }
 
 .profile-picture {
-    flex: 0 0 300px;
+    flex: 0 0 500px;
     border: 4px solid var(--blue-primary);
-    border-radius: 50%;
+    border-radius: 5%;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: pulse 2s infinite;
 }
 
 .profile-picture:hover {
-    transform: scale(1.05) rotate(2deg);
+    transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(52, 152, 219, 0.5);
 }
 
@@ -132,11 +105,6 @@ main {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.5s ease;
-}
-
-.profile-picture:hover img {
-    transform: scale(1.1);
 }
 
 .profile-info {
@@ -147,16 +115,6 @@ main {
     font-size: 3rem;
     color: var(--blue-primary);
     margin-bottom: 0.5rem;
-    animation: slideInLeft 1s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.profile-info h1 i {
-    font-size: 2.5rem;
-    color: var(--blue-dark);
-    animation: bounce 2s infinite;
 }
 
 .profile-info .title {
@@ -164,14 +122,6 @@ main {
     color: var(--text-dark);
     margin-bottom: 1rem;
     font-weight: 300;
-    animation: slideInRight 1s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.profile-info .title i {
-    color: var(--blue-primary);
 }
 
 .profile-info .student {
@@ -180,7 +130,6 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 30px;
     display: inline-block;
-    animation: fadeIn 1.5s ease;
 }
 
 .highlight {
@@ -188,46 +137,6 @@ main {
     font-weight: bold;
 }
 
-.skills-preview {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.skills-preview span {
-    background-color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.3s ease;
-    animation: float 3s ease-in-out infinite;
-}
-
-.skills-preview span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.skills-preview span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.skills-preview span:hover {
-    transform: translateY(-3px);
-    background-color: var(--blue-primary);
-    color: white;
-}
-
-.skills-preview span:hover i {
-    color: white;
-}
-
-.skills-preview span i {
-    color: var(--blue-primary);
-}
 
 .contacts {
     margin: 3rem 0 2rem;
@@ -238,15 +147,6 @@ main {
     color: var(--text-dark);
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.contacts h2 i {
-    color: var(--blue-primary);
-    animation: ring 4s ease-in-out infinite;
 }
 
 .contact-icons {
@@ -267,51 +167,21 @@ main {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-icons a::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: rgba(52, 152, 219, 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
-}
-
-.contact-icons a:hover::before {
-    width: 300px;
-    height: 300px;
 }
 
 .contact-icons a i {
     color: var(--blue-primary);
     font-size: 1.2rem;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.contact-icons a span {
-    position: relative;
-    z-index: 1;
 }
 
 .contact-icons a:hover {
     background-color: var(--blue-primary);
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
 .contact-icons a:hover i {
     color: white;
-    transform: scale(1.2);
 }
 
 .about h1 {
@@ -321,7 +191,6 @@ main {
     border-bottom: 3px solid var(--blue-primary);
     padding-bottom: 0.5rem;
     display: inline-block;
-    animation: slideInLeft 0.8s ease;
 }
 
 .about section {
@@ -330,28 +199,11 @@ main {
     border-radius: 10px;
     margin-bottom: 2rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.about section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 0;
-    background-color: var(--blue-primary);
-    transition: height 0.3s ease;
-}
-
-.about section:hover::before {
-    height: 100%;
+    transition: transform 0.3s ease;
 }
 
 .about section:hover {
-    transform: translateY(-5px) translateX(5px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
 }
 
@@ -366,11 +218,6 @@ main {
 
 .about h2 i {
     font-size: 1.8rem;
-    transition: transform 0.3s ease;
-}
-
-.about section:hover h2 i {
-    transform: rotate(360deg);
 }
 
 .about ul {
@@ -382,89 +229,26 @@ main {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.about li:hover {
-    transform: translateX(10px);
 }
 
 .about li i {
     color: var(--blue-primary);
     width: 25px;
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
-.about li:hover i {
-    transform: scale(1.2);
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-}
-
-.skill-tag {
-    background-color: var(--blue-light);
-    color: var(--blue-primary);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.skill-tag i {
-    font-size: 1rem;
-}
-
-.skill-tag:hover {
-    background-color: var(--blue-primary);
-    color: white;
-    transform: scale(1.05);
-    box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
-}
-
-.skill-tag:hover i {
-    color: white;
-}
 
 footer {
     text-align: center;
     padding: 1.5rem;
     background-color: white;
     margin-top: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--blue-primary), transparent);
-    animation: scan 3s linear infinite;
 }
 
 .verse {
     font-style: italic;
     color: var(--text-dark);
     font-size: 1.1rem;
-    position: relative;
-    display: inline-block;
-}
-
-.verse i {
-    color: var(--blue-primary);
-    margin: 0 5px;
-    animation: shine 2s infinite;
 }
 
 .verse span {
@@ -490,110 +274,6 @@ footer::before {
     }
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-    }
-    50% {
-        box-shadow: 0 5px 25px rgba(52, 152, 219, 0.6);
-    }
-    100% {
-        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-    }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes ring {
-    0%, 100% {
-        transform: rotate(0);
-    }
-    10%, 30%, 50%, 70%, 90% {
-        transform: rotate(-10deg);
-    }
-    20%, 40%, 60%, 80% {
-        transform: rotate(10deg);
-    }
-}
-
-@keyframes scan {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 200%;
-    }
-}
-
-@keyframes shine {
-    0%, 100% {
-        opacity: 1;
-        text-shadow: 0 0 5px var(--blue-primary);
-    }
-    50% {
-        opacity: 0.7;
-        text-shadow: 0 0 20px var(--blue-primary);
-    }
-}
-
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -612,15 +292,6 @@ footer::before {
     
     .profile-info h1 {
         font-size: 2.5rem;
-        justify-content: center;
-    }
-    
-    .profile-info .title {
-        justify-content: center;
-    }
-    
-    .skills-preview {
-        justify-content: center;
     }
     
     .contact-icons {
@@ -635,15 +306,11 @@ footer::before {
     .about h1 {
         font-size: 2rem;
     }
-    
-    .about h2 {
-        font-size: 1.3rem;
-    }
 }
 
 @media (max-width: 480px) {
     .profile-picture {
-        flex-basis: 200px;
+        flex-basis: 150px;
     }
     
     .profile-info h1 {
