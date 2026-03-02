@@ -88,8 +88,8 @@ main {
 }
 
 .profile-picture {
-    flex: 0 0 500px;
-    width: 500px;
+    
+    width: 32%;
     border: 4px solid var(--blue-primary);
     border-radius: 5%;
     overflow: hidden;
@@ -261,6 +261,9 @@ footer {
 
 .body-propos{
     animation: apparition 0.5s ease;
+}
+.anim{
+    animation: slideUp 1.75s ease;
 }
 @keyframes apparition{
     from{
